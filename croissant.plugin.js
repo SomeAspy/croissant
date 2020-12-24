@@ -16,7 +16,12 @@ module.exports = class Croissant {
           })
         
     } // Required function. Called when the plugin is activated (including after reloads)
-    stop() {} // Required function. Called when the plugin is deactivated
+    stop() {
+    document.removeEventListener("click", function play() {
+            var audio = new Audio('https://raw.githubusercontent.com/SomeAspy/croissant/main/croissant%20sound.mp3');
+            audio.play();
+          })
+    } // Required function. Called when the plugin is deactivated
     getName() { return "Croissant"; }
     getAuthor() { return "Some_Aspy#9999"; }
     getDescription() { return "every click notifies you of a croissant"; }
