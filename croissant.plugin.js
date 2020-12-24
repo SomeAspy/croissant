@@ -7,11 +7,11 @@
  * @authorLink https://github.com/SomeAspy
  */
 
-module.exports = class ExamplePlugin {
-    load() {} // Optional function. Called when the plugin is loaded in to memory
+module.exports = class Croissant {
 
-    start() {} // Required function. Called when the plugin is activated (including after reloads)
+    start() {
+        document.addEventListener("click", alert("Croissant", "Croissant"))
+    } // Required function. Called when the plugin is activated (including after reloads)
     stop() {} // Required function. Called when the plugin is deactivated
 
-    observer(changes) {} // Optional function. Observer for the `document`. Better documentation than I can provide is found here: <https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver>
 }
